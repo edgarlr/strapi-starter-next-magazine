@@ -38,26 +38,28 @@ This starter allows you to clone and deploy a fully customizable Digital Magazin
 
 ## Integrations
 
-This project integrates out-of-the-box with [Magazine Strapi CMS](https://github.com/edgarlr/magazine-api).
+This project integrates out-of-the-box with [Strapi Magazine Template](https://github.com/edgarlr/strapi-template-magazine) and [Heroku Magazine Strapi CMS](https://github.com/edgarlr/magazine-api).
+
+Check out all the other [Strapi starters](https://strapi.io/starters)
 
 ## Getting started
 
-Create your own copy of this project by clicking the ["Use this template"](https://github.com/edgarlr/magazine/generate) button and filling the form.
+Use the `create-strapi-starter` CLI to create your project.
 
-### Running locally
-
-First, you'll need to have the [Magazine Strapi CMS](https://github.com/edgarlr/magazine-api) running at [http://localhost:1337](http://localhost:1337). You can follow the instructions on that repo to set it up and get it running.
-
-Then, create a folder and `git clone` from your copy of this repository.
-
-Install the dependencies and start the dev server.
-
-```bash
-  yarn install
-  yarn dev
+```sh
+# Using Yarn
+yarn create strapi-starter my-site https://github.com/edgarlr/magazine
+# Or using NPM
+npx create-strapi-starter my-site https://github.com/edgarlr/magazine
 ```
 
-The dev server will run on [http://localhost:3000](http://localhost:3000). If it doesn't work make shure that:
+The CLI will create a monorepo, install dependencies, and run your project automatically.
+
+The Next frontend app will run on [http://localhost:3000](http://localhost:3000)
+
+The Strapi backend server will run on [http://localhost:1337](http://localhost:1337)
+
+If it doesn't work make shure that:
 
 - You've added sample data to Strapi (Contributors, categories and articles are necessary)
 - You've set the Roles & Permissions to `find`on Contributors, Categories, articles and pages. (More info on [Magazine Strapi CMS](https://github.com/edgarlr/magazine-api) running locally instructions.)
@@ -111,7 +113,7 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 ```
@@ -130,7 +132,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </ListProvider>
     </UIProvider>
-  )
+  );
 }
 ```
 
