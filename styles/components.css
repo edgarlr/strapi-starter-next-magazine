@@ -1,0 +1,94 @@
+@layer components {
+  .serif {
+    @apply font-serif font-normal;
+  }
+
+  .input-primary {
+    @apply border py-2 px-3 rounded-xl focus:outline-none focus:border-primary;
+  }
+
+  .select-primary {
+    @apply border py-1 pl-4 pr-10 rounded-lg focus:outline-none focus:border-primary cursor-pointer;
+  }
+
+  .markdown {
+    @apply text-lg max-w-full leading-article;
+    & > * {
+      @apply mb-4;
+    }
+
+    & a {
+      @apply underline;
+    }
+
+    & img {
+      @apply max-w-full w-auto mx-auto block rounded;
+    }
+
+    & h2,
+    & h3 {
+      @apply font-serif font-normal;
+    }
+
+    & h2 {
+      @apply mt-16;
+    }
+
+    & h3 {
+      @apply mt-10;
+    }
+    & h4 {
+      @apply mt-8;
+    }
+    & h5 {
+      @apply mt-6;
+    }
+    & hr {
+      @apply border-primary-20 mt-20;
+    }
+
+    & blockquote {
+      @apply my-6 py-4 pl-6 pr-4 relative text-secondary border-l-4 border-primary leading-tight bg-primary-05;
+    }
+
+    & blockquote p {
+      @apply text-base;
+    }
+
+    /* Code Snippets */
+    & *:not(pre) > code {
+      @apply text-base p-1 bg-primary-05 rounded-sm;
+    }
+
+    & *:not(pre) > code::before,
+    & *:not(pre) > code::after {
+      user-select: none;
+    }
+
+    & pre {
+      @apply overflow-x-auto bg-primary-05 leading-6 py-6 px-5 rounded text-base;
+    }
+
+    /* Unordered List */
+    & ul {
+      @apply px-6 list-inside leading-normal;
+    }
+
+    & ul li {
+      @apply leading-6 list-disc px-4 p-1;
+    }
+
+    & ul li strong {
+      @apply font-bold;
+    }
+
+    /* Order List */
+    & ol {
+      @apply px-6 list-outside list-decimal leading-normal;
+    }
+
+    & ol li {
+      @apply p-2 leading-6;
+    }
+  }
+}
