@@ -48,9 +48,9 @@ Use the `create-strapi-starter` CLI to create your project.
 
 ```sh
 # Using Yarn
-yarn create strapi-starter my-site https://github.com/edgarlr/magazine
+yarn create strapi-starter my-project edgarlr/next-magazine
 # Or using NPM
-npx create-strapi-starter my-site https://github.com/edgarlr/magazine
+npx create-strapi-starter my-project edgarlr/next-magazine
 ```
 
 The CLI will create a monorepo, install dependencies, and run your project automatically.
